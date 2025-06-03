@@ -12,7 +12,12 @@ public class MainAntrian01_12{
             System.out.println("     Pilih Menu    ");
             System.out.println("===================");
             System.out.println("1. Tambah Data");
-            System.out.println("");
+            System.out.println("2. Tampilkan Data");
+            System.out.println("3. Cek Sisa Antrian Kendaraan");
+            System.out.println("4. Layani Kendaraan");
+            System.out.println("5. Lihat Riwayat Transaksi");
+            System.out.println("6. Sort Riwayat Transaksi");
+            System.out.println("0. Keluar");
             System.out.print("Pilih Menu : ");
             pilih = sc.nextInt();
             sc.nextLine();
@@ -29,8 +34,12 @@ public class MainAntrian01_12{
                     break;
                 case 2:
                     dll.tampilkanAntrian();
-                
-                default : {}
+                    break;
+                case 3:
+                    System.out.println("Jumlah Antrian : " + dll.size());
+                    break;
+                default : 
+                break;
             }
         } while (true);
     }

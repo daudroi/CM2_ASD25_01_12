@@ -34,4 +34,14 @@ public class DLL01_12 {
             System.out.println("Linked Lists Kosong");
         }
     }
+
+    public int size() {
+        int count = 0;
+        Kendaraan01_12 tmp = head;
+        while (tmp != null) {
+            count++;
+            tmp = tmp.next;
+        }
+        return  count;
+    }
 }
