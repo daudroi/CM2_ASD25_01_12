@@ -15,4 +15,12 @@ public class TransaksiPengisian01_12 {
         this.totalBayar = bbm.hargaPerLiter * liter;
         this.next = next;
     }
+    public void tampilTransaksi() {
+    System.out.printf("%-15s %-15s %-15s %-10.2f\n",
+        kendaraan.platNo,
+        kendaraan.tipe,
+        bbm.namaBBM,
+        totalBayar
+    );
+}
 }

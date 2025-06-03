@@ -46,6 +46,10 @@ public class MainAntrian01_12 {
                     System.out.println("Jumlah Antrian : " + dll.size());
                     break;
                 case 4:
+                if (dll.isEmpty()) {
+                      System.out.println(">> Tidak ada kendaraan dalam antrian.");
+                      break;
+                  }
                     dll.layaniKendaraan();
                     bbm.tampilBBM();
                     Kendaraan01_12 k = dll.removeLast();
@@ -67,6 +71,8 @@ public class MainAntrian01_12 {
                     tr.tambahTransaksi(k, bbm1, liter); 
                     System.out.println(">> Transaksi berhasil ditambahkan.");
                     break;
+                case 5:
+                     tr.tampilTransaksi();
                 default:
                     break;
             }

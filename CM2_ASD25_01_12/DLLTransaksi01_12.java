@@ -14,12 +14,12 @@ public class DLLTransaksi01_12 {
         }
     }
 
-//     public void tampilTransaksi() {
-//         TransaksiPengisian01_12 tmp = head;
-//         System.out.printf("%-15s %-15s %-15s %-10s %-10s %-10s\n", "Plat", "Jenis", "Merk", "BBM", "Liter", "Total");
-//         while (tmp != null) {
-//             tmp.tampilTransaksi();
-//             tmp = tmp.next;
-//         }
-//     }
+    public void tampilTransaksi() {
+        TransaksiPengisian01_12 tmp = head;
+        System.out.printf("%-15s %-15s %-15s %-10s\n", "Plat Nomor ", "Jenis Mobil", "Jenis BBM", "BBM", "Total");
+        while (tmp != null) {
+            tmp.tampilTransaksi();
+            tmp = tmp.next;
+        }
+    }
 }
