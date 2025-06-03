@@ -14,4 +14,7 @@ public class Kendaraan01_12 {
     public void tampilInformasi(){
         System.out.printf("%-20s %-20s %-20s\n", platNo, tipe, merk);
     }
+    public void tampilplat(){
+         System.out.println(platNo);
+    }
 }

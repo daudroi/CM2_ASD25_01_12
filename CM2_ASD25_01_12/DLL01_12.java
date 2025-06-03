@@ -4,6 +4,7 @@ public class DLL01_12 {
     Kendaraan01_12 head, tail;
     int size = 0;
     Kendaraan01_12 Kendaraan = new Kendaraan01_12(tail, null, null, null, head);
+    DLLBBM01_12 bbm = new DLLBBM01_12();
     
     public void tambahData(String platNo, String tipe, String merk) {
         Kendaraan01_12 newNode = new Kendaraan01_12(tail, platNo, tipe, merk, head);
@@ -29,11 +30,11 @@ public class DLL01_12 {
                 tmp.tampilInformasi();
                 tmp = tmp.next;
             }
-            System.out.println("berhasil diisi");
         } else {
-            System.out.println("Linked Lists Kosong");
+            System.out.println("Antrian Kosong");
         }
     }
+
 
     public int size() {
         int count = 0;
@@ -43,5 +44,27 @@ public class DLL01_12 {
             tmp = tmp.next;
         }
         return  count;
+    }
+      public void layaniKendaraan(){
+        if(!isEmpty()){
+           System.out.print("Kendaraan ");
+           head.tampilplat();
+           System.out.println();
+           
+        }else{
+            System.out.println("Antrian Kosong");
+        }
+    }
+        public Kendaraan01_12 removeLast() {
+    if (tail == null) return null;
+
+    Kendaraan01_12 tmp = tail;
+    if (tail.prev != null) {
+        tail = tail.prev;
+        tail.next = null;
+    } else {
+        head = tail = null;
+    }
+    return tmp;
     }
 }
