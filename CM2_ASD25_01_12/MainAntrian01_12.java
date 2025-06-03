@@ -71,8 +71,20 @@ public class MainAntrian01_12 {
                     tr.tambahTransaksi(k, bbm1, liter); 
                     System.out.println(">> Transaksi berhasil ditambahkan.");
                     break;
-                default:
+                case 5:
+                    tr.tampilTransaksi();
+                 case 6:
+                 if (dll.isEmpty()) {
+                      System.out.println(">> Tidak ada kendaraan dalam antrian.");
+                      break;}
+                    tr.sortByPlatNomor();
+                    tr.tampilTransaksi();
                     break;
+                case 0:
+                    System.exit(0);
+                default:
+                    System.out.println("Pilihan tidak valid.");
+
             }
         } while (true);
     }
