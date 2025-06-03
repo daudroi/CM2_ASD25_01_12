@@ -11,4 +11,7 @@ public class Kendaraan01_12 {
         this.merk = merk;
         this.next = next;
     }
+    public void tampilInformasi(){
+        System.out.printf("%-20s %-20s %-20s\n", platNo, tipe, merk);
+    }
 }

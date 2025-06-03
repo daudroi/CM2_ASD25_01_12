@@ -12,12 +12,13 @@ public class MainAntrian01_12{
             System.out.println("     Pilih Menu    ");
             System.out.println("===================");
             System.out.println("1. Tambah Data");
+            System.out.println("");
             System.out.print("Pilih Menu : ");
             pilih = sc.nextInt();
             sc.nextLine();
 
             switch (pilih) {
-                case 1 -> {
+                case 1: 
                     System.out.print("Masukan plat nomor : ");
                     String platNo = sc.nextLine();
                     System.out.print("Masukan tipe kendaraan : ");
@@ -25,8 +26,11 @@ public class MainAntrian01_12{
                     System.out.print("Masukan merk : ");
                     String merk = sc.nextLine();
                     dll.tambahData(platNo, tipe, merk);
-                }
-                default -> {}
+                    break;
+                case 2:
+                    dll.tampilkanAntrian();
+                
+                default : {}
             }
         } while (true);
     }
